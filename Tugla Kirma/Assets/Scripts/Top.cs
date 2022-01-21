@@ -25,7 +25,7 @@ public class Top : MonoBehaviour
             ///sadece x deðerini aldýgýmýza dikkat edelim 
             
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&!OyunBasladi)
         {
             OyunBasladi = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 10f);  

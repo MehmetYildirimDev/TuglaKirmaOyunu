@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Sahneler/AnaSahne.unity
     guid: 97a86e6ddd5455943bba032a8a3d395f
   - enabled: 1
     path: Assets/Sahneler/Bolum1.unity
+    guid: 5b9f0be983c29724ba4e0cfe03662518
+  - enabled: 1
+    path: Assets/Sahneler/Bolum2.unity
     guid: 5a71635175cee0a41bfb0efe02b3e56a
+  - enabled: 1
+    path: Assets/Sahneler/Bolum3.unity
+    guid: a8a17ba81284be6468ec34b6b750d428
+  - enabled: 1
+    path: Assets/Sahneler/Bolum4.unity
+    guid: 602b6f4654a49344fad00f7cc569ca8b
   - enabled: 1
     path: Assets/Sahneler/Kazandiniz.unity
     guid: fca3e9470b6497345bc59497e68c49f7
