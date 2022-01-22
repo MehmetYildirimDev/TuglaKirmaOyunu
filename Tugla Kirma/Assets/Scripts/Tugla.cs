@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tugla : MonoBehaviour
 {
+    public GameObject kirilmaEfekti;
     public AudioClip[] SesEfekti;
     public static int ToplanTuglaSayisi;
     public Sprite[] tuglaSprites;
@@ -33,7 +34,12 @@ public class Tugla : MonoBehaviour
             ///neden direk eþitlemiyoruz ?- ielrde gelecen özeliklerde mesala top sayýsý artabilir o zaman daha büyük olabilir
             if (CarpmaSayisi>=maxCarpmaSayisi)                
             {
-                
+                Vector3 pos = diger.contacts[0].point;///burada ilk çarpma noktasýný alýyoruz
+                GameObject go = Instantiate(kirilmaEfekti, pos, Quaternion.identity) as GameObject;
+                Color TuglaRengi = GetComponent<SpriteRenderer>().color;
+                go.GetComponent<ParticleSystemRenderer>().material.color = TuglaRengi;
+                Destroy(go, 1f);
+
                 ToplanTuglaSayisi--;
                 //               Debug.Log(ToplanTuglaSayisi.ToString());
                 puanScript.puanArtir();

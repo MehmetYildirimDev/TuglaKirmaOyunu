@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 563a1f48cd34222438cd2b1597d6b791, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kirilmaEfekti: {fileID: 6941180877464084103, guid: 9a41adef81aa1054a9ba406e47515855, type: 3}
   SesEfekti:
   - {fileID: 8300000, guid: 1d90caf0e0fee1d41a5cac9a4934a589, type: 3}
   - {fileID: 8300000, guid: 4abaf87ffa728cc48aedbc919150309d, type: 3}
