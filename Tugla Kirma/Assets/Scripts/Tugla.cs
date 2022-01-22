@@ -8,11 +8,13 @@ public class Tugla : MonoBehaviour
     public Sprite[] tuglaSprites;
     private int maxCarpmaSayisi;
     private int CarpmaSayisi=0;
+    private Puan puanScript;
     // Start is called before the first frame update
     void Start()
     {
         maxCarpmaSayisi = tuglaSprites.Length+1;//+1 sebebi 0 sprite olanýn 1 o yüzden 
         ToplanTuglaSayisi++;//Her script çalýþtýrýlýrken sayýmýzý artýrýyoruz ki kaç tane tugla var öðrenelim
+        puanScript = GameObject.FindObjectOfType<Puan>().GetComponent<Puan>();//üzerinde Puan scripti bulunan objenin puan scriptini eþitle diyoruz
     }
 
     // Update is called once per frame
@@ -31,7 +33,8 @@ public class Tugla : MonoBehaviour
             if (CarpmaSayisi>=maxCarpmaSayisi)                
             {
                 ToplanTuglaSayisi--;
-                Debug.Log(ToplanTuglaSayisi.ToString());
+                //               Debug.Log(ToplanTuglaSayisi.ToString());
+                puanScript.puanArtir();
                 if (ToplanTuglaSayisi<=0)
                 {
                     GameObject.FindObjectOfType<OyunKontrol>().GetComponent<OyunKontrol>().BirSonrakiSahne();

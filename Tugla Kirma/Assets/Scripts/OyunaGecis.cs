@@ -7,7 +7,9 @@ public class OyunaGecis : MonoBehaviour
 {
     // Start is called before the first frame update
   public void SahneGecis()
-    {
-        SceneManager.LoadScene("Oyun1");
+    {   ///static deðiþken kullandýgýmýz içib buradan sýfýrladýk
+        Tugla.ToplanTuglaSayisi = 0;
+        GameObject.FindObjectOfType<Puan>().GetComponent<Puan>().puanSifirla();
+        SceneManager.LoadScene("Bolum1");
     }
 }
