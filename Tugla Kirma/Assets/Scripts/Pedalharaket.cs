@@ -19,11 +19,11 @@ public class Pedalharaket : MonoBehaviour
         ///Faremizden aldýðýmýz deðerlieri sahnemize uyarlýyacaðýz bunun için kullanýyruz bu fonksiyonu
         ///z deðerini 0 vermediðimiz sürece sorun yok(nedenini anlamadým)
         ///her ne kadar 2d olsada 3d bi nokta oluþturuyoruz aslýnda hepsi 3d bi ortamda geliþtiriliyor 
-      transform.position = new Vector3(MousePos.x, transform.position.y, transform.position.z);
+      transform.position = new Vector3(Mathf.Clamp(MousePos.x,-3f,3f), transform.position.y, transform.position.z);
         ///sadece x deðerini deðiþtireceðiz o yüzden 
 
      //   transform.position = new Vector3(Top.transform.position.x, transform.position.y, transform.position.z);
-
+    
 
     }
 }

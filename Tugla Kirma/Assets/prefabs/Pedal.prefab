@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5283231635725593054}
   - component: {fileID: 5283231635725593041}
-  - component: {fileID: 5283231635725593040}
   - component: {fileID: 5283231635725593055}
+  - component: {fileID: 6433239470008149441}
   m_Layer: 0
   m_Name: Pedal
   m_TagString: Untagged
@@ -84,32 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5283231635725593040
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283231635725593043}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.000033326447, y: 0.000518322}
-  m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.16, y: 0.16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.1333337, y: 0.13201904}
-  m_EdgeRadius: 0
 --- !u!114 &5283231635725593055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +96,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb67175b0a635049968995b025fb500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!60 &6433239470008149441
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5283231635725593043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.06404532, y: 0.04557617}
+      - {x: -0.07798327, y: 0.0035996437}
+      - {x: -0.06651626, y: -0.037772253}
+      - {x: 0.056549836, y: -0.036587313}
+      - {x: 0.067163005, y: -0.031986292}
+      - {x: 0.078579746, y: 0.0038564876}
+      - {x: 0.067640476, y: 0.031970978}
+      - {x: 0.058093138, y: 0.05463083}
