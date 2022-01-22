@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tugla : MonoBehaviour
 {
+    public AudioClip[] SesEfekti;
     public static int ToplanTuglaSayisi;
     public Sprite[] tuglaSprites;
     private int maxCarpmaSayisi;
@@ -27,11 +28,12 @@ public class Tugla : MonoBehaviour
     {
         if (diger.gameObject.name.Equals("top"))
         {
-           
+            
             CarpmaSayisi++;
             ///neden direk eþitlemiyoruz ?- ielrde gelecen özeliklerde mesala top sayýsý artabilir o zaman daha büyük olabilir
             if (CarpmaSayisi>=maxCarpmaSayisi)                
             {
+                
                 ToplanTuglaSayisi--;
                 //               Debug.Log(ToplanTuglaSayisi.ToString());
                 puanScript.puanArtir();
@@ -41,10 +43,12 @@ public class Tugla : MonoBehaviour
                     //OyunKontrol scriptinin baðlý oldugu objeyi bul ve OyunKontrol compenentindeki fonksiyonu bul
                     
                 }
+                AudioSource.PlayClipAtPoint(SesEfekti[1], transform.position);
                 Destroy(this.gameObject);
             }
             else
             {
+                AudioSource.PlayClipAtPoint(SesEfekti[0], transform.position);
                 GetComponent<SpriteRenderer>().sprite = tuglaSprites[CarpmaSayisi - 1];
             }
         }

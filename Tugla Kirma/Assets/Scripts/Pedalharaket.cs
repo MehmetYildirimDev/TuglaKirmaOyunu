@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pedalharaket : MonoBehaviour
 {
     GameObject Top;
+    public AudioClip SesEfekti;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,4 +27,13 @@ public class Pedalharaket : MonoBehaviour
     
 
     }
+    private void OnCollisionEnter2D(Collision2D diger)
+    {
+        if (true)
+        {
+
+        }
+        AudioSource.PlayClipAtPoint(SesEfekti, transform.position);
+    }
+
 }
